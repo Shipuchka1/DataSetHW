@@ -1,0 +1,27 @@
+﻿<Window x:Class="DataSetHW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataSetHW"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="705">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label FontSize="20" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Выберите таблицу</Label>
+        <ComboBox SelectionChanged="TablesComboBox_Selected" Grid.Row="1" x:Name="TablesComboBox"></ComboBox>
+                <ListBox x:Name="TrackEvalutionPartListBox" DisplayMemberPath="value" Grid.Row="2">
+                    
+                </ListBox>
+        <StackPanel Grid.Row="3" Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Margin="20" Height="40" Width="200" x:Name="TableStructButton" Click="TableStructButton_Click">Структура таблицы</Button>
+            <Button Margin="20" Height="40" Width="200" x:Name="AllTablesDataButton" Click="AllTablesDataButton_Click">Вывести данные со всех таблиц</Button>
+        </StackPanel >
+           
+    </Grid>
+</Window>
